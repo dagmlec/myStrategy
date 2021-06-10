@@ -5,7 +5,7 @@
  */
 package mystrategy;
 
-import data.DataGenerator;
+//import data.DataGenerator;
 
 /**
  *
@@ -21,7 +21,7 @@ public class Client {
         /* Algorytmy sortowania */
         // http://www.algorytm.org/algorytmy-sortowania/
         
-        double[] dataNonSort = DataGenerator.generate(100000);
+        //double[] dataNonSort = DataGenerator.generate(100000);
         
        /* Wzorzec Stratega */
         //...
