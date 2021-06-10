@@ -5,14 +5,16 @@
  */
 package sort.methods;
 
+import mystrategy.Strategy;
+
 /**
  *
  * @author LeopardProMK
  */
-public class Selectionsort {
-    void sort(int arr[])
+public class Selectionsort implements Strategy {
+    public void sort(double arr[])
     {
-        int n = arr.length;
+        double n = arr.length;
 
         // One by one move boundary of unsorted subarray
         for (int i = 0; i < n-1; i++)
@@ -25,9 +27,10 @@ public class Selectionsort {
 
             // Swap the found minimum element with the first
             // element
-            int temp = arr[min_idx];
+            double temp = arr[min_idx];
             arr[min_idx] = arr[i];
             arr[i] = temp;
+            System.out.println("sorting array using quick sort strategy");
         }
     }
 }

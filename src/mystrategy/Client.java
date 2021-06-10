@@ -5,7 +5,10 @@
  */
 package mystrategy;
 
-//import data.DataGenerator;
+
+import data.DataGenerator;
+
+import sort.methods.Bubblesort;
 
 /**
  *
@@ -21,11 +24,25 @@ public class Client {
         /* Algorytmy sortowania */
         // http://www.algorytm.org/algorytmy-sortowania/
         
-        //double[] dataNonSort = DataGenerator.generate(100000);
-        
+        double[] dataNonSort = DataGenerator.generate(10000);
+
        /* Wzorzec Stratega */
         //...
-       
+
+        Context ctx = new Context((Strategy) new Bubblesort());
+        ctx.arrange(dataNonSort);
+
         System.out.println("Time: ??");
+    }
+}
+
+class Context{
+        private final Strategy strategy;
+        public Context(Strategy strategy) {
+            this.strategy = strategy;
+    }
+
+        public void arrange(double[] input) {
+            strategy.sort(input);
     }
 }

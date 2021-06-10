@@ -29,4 +29,8 @@ public class Bubblesort {
             System.out.print(tab[i]+" ");
         }
     }
+    public void sort(int[] numbers) {
+        System.out.println("sorting array using quick sort strategy");
+
+    }
 }

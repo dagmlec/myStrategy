@@ -5,16 +5,18 @@
  */
 package sort.methods;
 
+import mystrategy.Strategy;
+
 /**
  *
  * @author LeopardProMK
  */
-public class Insertionsort {
-    void sort(int arr[])
+public class Insertionsort implements Strategy {
+    public void sort(double arr[])
     {
-        int n = arr.length;
+        double n = arr.length;
         for (int i = 1; i < n; ++i) {
-            int key = arr[i];
+            double key = arr[i];
             int j = i - 1;
 
             /* Move elements of arr[0..i-1], that are
@@ -26,6 +28,8 @@ public class Insertionsort {
             }
             arr[j + 1] = key;
         }
+        System.out.println("sorting array using insertion sort strategy");
     }
+
 
 }

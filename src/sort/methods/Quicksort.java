@@ -5,11 +5,13 @@
  */
 package sort.methods;
 
+import mystrategy.Strategy;
+
 /**
  *
  * @author LeopardProMK
  */
-public class Quicksort {
+public class Quicksort implements Strategy {
     /* http://www.algorytm.org/algorytmy-sortowania/sortowanie-szybkie-quicksort/quick-j.html */
     private static int tablica[];
     private static int ile_liczb;
@@ -39,5 +41,9 @@ public class Quicksort {
             quicksort(tablica,x,j);
         if (i<y)
             quicksort(tablica,i,y);
+    }
+    public void sort(double[] numbers) {
+        System.out.println("sorting array using quick sort strategy");
+
     }
 }
